@@ -1,4 +1,4 @@
-package etc;
+package ps;
 
 import java.util.ArrayList;
 import java.util.HashSet;
