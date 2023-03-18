@@ -10,6 +10,7 @@ public class IntersectionOfStartSample {
         IntersectionOfStartSample ios = new IntersectionOfStartSample();
         int[][] line = {{2, -1, 4}, {-2, -1, 4}, {0, -1, 1}, {5, -8, -12}, {5, 8, 12}};
 //        int[][] line = {{0, 1, -1}, {1, 0, -1}, {1, 0, 1}};
+
         String[] solution = ios.solution(line);
         for (String s : solution) {
             System.out.println(s);
@@ -22,6 +23,7 @@ public class IntersectionOfStartSample {
         Point minPoint = getMinPoint(points);
         Point maxPoint = getMaxPoint(points);
 
+        // 배열 사이즈이므로 +1
         int width = (int) (maxPoint.x - minPoint.x + 1);
         int height = (int) (maxPoint.y - minPoint.y + 1);
 
@@ -38,8 +40,8 @@ public class IntersectionOfStartSample {
     }
 
     private static void GeneralToTwoDimension(Set<Point> points, Point minPoint, Point maxPoint, char[][] arr) {
+        // 일반 좌표 -> 2차원 배열 좌표 변환
         for (Point p : points) {
-            // 일반 좌표 -> 2차원 배열 좌표 변환
             int x = (int) (p.x - minPoint.x);
             int y = (int) (maxPoint.y - p.y);
             arr[y][x] = '*';
@@ -47,12 +49,14 @@ public class IntersectionOfStartSample {
     }
 
     private static void fillDotArray(char[][] arr) {
+        // 내부를 '.'으로 채움
         for (char[] row : arr) {
             Arrays.fill(row, '.');
         }
     }
 
     private void setPointList(int[][] line, Set<Point> list) {
+        // 교점 구해서 리스트에 담기
         for (int i = 0; i < line.length; i++) {
             for (int j = i+1; j < line.length; j++) {
                 Point intersection = intersection(line[i][0], line[i][1], line[i][2],
