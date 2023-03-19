@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
+// https://school.programmers.co.kr/learn/courses/30/lessons/87377
 public class IntersectionOfStartSample {
 
     public static void main(String[] args) {

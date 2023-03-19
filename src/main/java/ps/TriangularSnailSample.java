@@ -1,5 +1,6 @@
 package ps;
 
+// https://school.programmers.co.kr/learn/courses/30/lessons/68645
 public class TriangularSnailSample {
     // 크기 n*n인 2차원 배열 생성
     // 방향 진행이 막힐 때까지 숫자 채우기
