@@ -8,6 +8,7 @@ public class OOPSample {
         p1.habitat = "H1";
 
         p1.showName();
+        p1.showName("P1.");
         p1.showHabitat();
 
         // Animal로 Promotion
@@ -32,5 +33,14 @@ class Penguin extends Animal {
 
     public void showHabitat() {
         System.out.printf("%s는 %s에 거주 \n", name, habitat);
+    }
+
+    @Override
+    public void showName() {
+        System.out.println("몰루");
+    }
+
+    public void showName(String name) {
+        System.out.println("name : " + name);
     }
 }
