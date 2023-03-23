@@ -3,6 +3,7 @@ package ps;
 import java.util.ArrayList;
 import java.util.List;
 
+// https://school.programmers.co.kr/learn/courses/30/lessons/60057
 public class StringCompressionSample {
 
     /**
