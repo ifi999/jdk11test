@@ -1,7 +1,7 @@
 package ps;
 
-//
-public class ReverseTernary {
+// https://school.programmers.co.kr/learn/courses/30/lessons/68935
+public class ReverseTernarySample {
 
     /**
      * 자연수 n을 3진법으로 변환한 후, 뒤집은 것을 10진법으로 다시 변환하기.
@@ -12,7 +12,7 @@ public class ReverseTernary {
      */
 
     public static void main(String[] args) {
-        ReverseTernary rt = new ReverseTernary();
+        ReverseTernarySample rt = new ReverseTernarySample();
 //        int result = rt.solution(45);
         int result = rt.solution(125);
         System.out.println("result = " + result);
