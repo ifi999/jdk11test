@@ -8,6 +8,9 @@ public class Proxy implements IService {
 
         service1 = new Service();
 
+        // Decorator Pattern의 경우 Proxy Pattern과 다르게 반환값에 조작을 가한다.
+        // return "decorated " + service1.runSomething();
+
         return service1.runSomething();
     }
 }
