@@ -20,10 +20,10 @@ public class SampleFactory {
 
         ApplicationContext ac = new AnnotationConfigApplicationContext(AppConfig.class);
         SampleFactory sf = ac.getBean(SampleFactory.class);
-        sf.invalidRequest(anyRequest);
+        sf.handleRequest(anyRequest);
     }
 
-    private void invalidRequest(AnyRequest request) {
+    private void handleRequest(AnyRequest request) {
         MemberTypeInterface memberTypeInterface = memberTypeFactory.getMemberTypeInterface(request.getMemberType());
         memberTypeInterface.handle();
     }
