@@ -5,7 +5,17 @@ import org.springframework.stereotype.Component;
 
 @Slf4j
 @Component
-public class AComponent {
+public class AComponent implements MemberTypeInterface {
+
+    @Override
+    public boolean support(MemberType memberType) {
+        return MemberType.A == memberType;
+    }
+
+    @Override
+    public void handle() {
+        log.info("####### handle AComponent #######");
+    }
 
     public void run() {
         log.info("####### AComponent #######");

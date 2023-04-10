@@ -11,10 +11,7 @@ import org.springframework.stereotype.Component;
 public class SampleFactory {
 
     @Autowired
-    private AComponent aComponent;
-
-    @Autowired
-    private BComponent bComponent;
+    private MemberTypeFactory memberTypeFactory;
 
     public static void main(String[] args) {
         AnyRequest anyRequest = new AnyRequest("userEmail", "userAddr", MemberType.A);
@@ -27,17 +24,8 @@ public class SampleFactory {
     }
 
     private void invalidRequest(AnyRequest request) {
-        if (MemberType.A == request.getMemberType()) {
-            aComponent.run();
-            log.info("Member Type : {}", request.getMemberType());
-        }
-        else if (MemberType.B == request.getMemberType()) {
-            bComponent.run();
-            log.info("Member Type : {}", request.getMemberType());
-        }
-        else {
-            log.error("Member Type : {}", request.getMemberType());
-        }
+        MemberTypeInterface memberTypeInterface = memberTypeFactory.getMemberTypeInterface(request.getMemberType());
+        memberTypeInterface.handle();
     }
 
 }
