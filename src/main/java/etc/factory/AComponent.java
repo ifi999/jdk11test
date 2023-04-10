@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 public class AComponent implements MemberTypeInterface {
 
     @Override
-    public boolean support(MemberType memberType) {
+    public boolean convertable(MemberType memberType) {
         return MemberType.A == memberType;
     }
 

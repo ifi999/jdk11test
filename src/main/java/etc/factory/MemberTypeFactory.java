@@ -12,7 +12,7 @@ public class MemberTypeFactory {
 
     public MemberTypeInterface getMemberTypeInterface(MemberType memberType) {
         return memberTypeInterfaces.stream()
-                .filter(memberTypeInterface -> memberTypeInterface.support(memberType))
+                .filter(memberTypeInterface -> memberTypeInterface.convertable(memberType))
                 .findFirst()
                 .orElseThrow(() -> new IllegalArgumentException(memberType.name()));
     }
