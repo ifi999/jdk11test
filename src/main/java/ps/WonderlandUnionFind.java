@@ -1,12 +1,11 @@
 package ps;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.Scanner;
 
 // https://cote.inflearn.com/contest/10/problem/09-07
-public class Wonderland {
+public class WonderlandUnionFind {
 
     /**
      * 트리 : 회로가 존재 x
