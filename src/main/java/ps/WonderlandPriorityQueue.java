@@ -51,7 +51,7 @@ public class WonderlandPriorityQueue {
                 sum += poll.cost;
                 List<CityEdge> cityEdges = list.get(poll.target);
                 for (CityEdge c : cityEdges) {
-                    queue.offer(c);
+                    if (ch[c.target] == 0) queue.offer(c);
                 }
             }
         }
