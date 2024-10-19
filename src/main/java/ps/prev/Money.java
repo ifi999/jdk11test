@@ -1,4 +1,4 @@
-package ps;
+package ps.prev;
 
 // 복리
 public class Money {

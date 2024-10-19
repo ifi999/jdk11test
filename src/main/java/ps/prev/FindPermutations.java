@@ -1,4 +1,4 @@
-package ps;
+package ps.prev;
 
 // 순열구하기2
 public class FindPermutations {

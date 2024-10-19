@@ -1,4 +1,4 @@
-package ps;
+package ps.prev;
 
 // 최소 공배수의 합
 public class FindLeastCommonMultiple {
